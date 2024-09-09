@@ -17,7 +17,6 @@ Your challenge is to apply a design pattern that allows this remote control to b
 
 ## Components
 
-Revised UML Diagram (Description)
 Client (ViewerApp):
 
 The ViewerApp remains as the client, which now has a menu to select which device (TV, Stereo, Lights, Ceiling Fan) to control.
