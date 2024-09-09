@@ -13,19 +13,27 @@ Ensure that the remote control can send these commands to any device without kno
 Your challenge is to apply a design pattern that allows this remote control to be flexible and extensible, enabling it to control various devices effortlessly. This should be achieved without the remote control having to understand the specific details of how each device operates.
 
 ## UML Diagram
-![alt text](https://github.com/JerryEsperanza/SoftEng1_4BSCS2/blob/master/commandPattern/commandPatternImage.png?raw=true)
+
 
 ## Components
 
-ViewerApp (Client): This represents an application used by viewers to control the TV. It interacts with the RemoteControl to send commands.
+Revised UML Diagram (Description)
+Client (ViewerApp):
 
-RemoteControl (Invoker): The RemoteControl acts as an invoker, receiving commands from the ViewerApp and executing them. It has a clickButton() method to invoke commands.
+The ViewerApp remains as the client, which now has a menu to select which device (TV, Stereo, Lights, Ceiling Fan) to control.
+Invoker (RemoteControl):
 
-Command (Interface): An interface defining the execute() method, which concrete command objects must implement. It ensures that all concrete commands have an execute() method.
+The RemoteControl class still has a +clickButton() method that invokes the execute() method of the Command.
+Interface Command:
 
-PowerOn (Concrete Command): A concrete command object representing the "power on" operation for the TV. It encapsulates the switchOn() method of the Tv object.
+The Command interface is unchanged, with the method +execute().
+Concrete Commands (PowerOn and PowerOff):
 
-PowerOff (Concrete Command): A concrete command object representing the "power off" operation for the TV. It encapsulates the switchOff() method of the Tv object.
+Both PowerOn and PowerOff are concrete command classes that implement Command. These now apply not only to the TV but also to the Stereo, Lights, and Ceiling Fan.
+Receivers:
 
-Tv (Receiver): The TV object represents the device being controlled. It has switchOn() and switchOff() methods to control its power state.
-
+The TV receiver remains as before.
+New Receivers:
+CeilingFan: Has methods +switchOn() and +switchOff().
+Stereo: Has methods +switchOn() and +switchOff().
+Lights: Has methods +switchOn() and +switchOff().
