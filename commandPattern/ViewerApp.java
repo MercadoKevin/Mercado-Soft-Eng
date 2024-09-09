@@ -11,9 +11,12 @@ public class ViewerApp {
 
         PowerOff powerOff = new PowerOff(tv);
         System.out.println(powerOff.execute());
-    
-    
-    
+
+        PowerOn powerOn = new PowerOn(cf);
+        System.out.println(powerOn.execute());
+
+        PowerOff powerOff = new PowerOff(cf);
+        System.out.println(powerOff.execute());
     
     }
 }
