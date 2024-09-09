@@ -13,7 +13,7 @@ Ensure that the remote control can send these commands to any device without kno
 Your challenge is to apply a design pattern that allows this remote control to be flexible and extensible, enabling it to control various devices effortlessly. This should be achieved without the remote control having to understand the specific details of how each device operates.
 
 ## UML Diagram
-
+![UML class](https://github.com/user-attachments/assets/55cec3bf-5d7c-4bd8-96c6-78b50732af3a)
 
 ## Components
 
