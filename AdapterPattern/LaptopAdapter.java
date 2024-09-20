@@ -1,7 +1,14 @@
 package adapterPattern;
 
-public class Laptop {
-    public void charge() {
-        System.out.println("Laptop is charging!");
+public class LaptopAdapter implements PowerOutlet {
+    private Laptop laptop;
+
+    public LaptopAdapter(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
+    @Override
+    public void plugIn() {
+        laptop.charge();
     }
 }
