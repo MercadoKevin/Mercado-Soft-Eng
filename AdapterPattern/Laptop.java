@@ -1,4 +1,4 @@
-package appliances.laptop;
+package adapterPattern;
 
 public class Laptop {
     public void charge() {
